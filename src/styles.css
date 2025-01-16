@@ -1,0 +1,57 @@
+/* ----------- ESTRUCTURA ----------- */
+body {
+    background-color: yellow;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #003bb9;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav {
+    background-color: #051147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+
+
+/* ----------- RESPONSIVE ----------- */
+
+/* Escriptori */
+@media (min-width: 1024px) {
+    .gallery-container {
+
+    }
+}
+
+/* Tablet */
+@media (min-width: 1024px) {
+    .gallery-container {
+
+    }
+}
+
+/* Mobil */
+@media (min-width: 1024px) {
+    .gallery-container {
+
+    }
+}
