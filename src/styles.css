@@ -1,6 +1,6 @@
-/* ----------- ESTRUCTURA ----------- */
+/* ESTRUCTURA GENERAL */
 body {
-    background-color: yellow;
+    background-color: rgb(255, 251, 233);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,50 +8,126 @@ body {
 }
 
 .header {
-    background-color: #003bb9;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #0034a3;
+    color: white;
+    padding: 20px;
     text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
-    
+    justify-content: space-between;
 }
 
-.nav {
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
     background-color: #051147;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
 }
 
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
 
+.nav a:hover {
+    color: #b9a600;
+}
 
-/* ----------- RESPONSIVE ----------- */
+.gallery-section {
+    padding: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.img:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img:hover .description {
+    opacity: 1;
+}
+
+footer {
+    background-color: #000f4e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer div {
+    margin-top: 10px;
+}
+
+footer img {
+    width: 20px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+/* RESPONSIVE */
 
 /* Escriptori */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .gallery-container {
-
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 /* Tablet */
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .gallery-container {
-
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Mobil */
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     .gallery-container {
-
+        grid-template-columns: 1fr;
     }
 }
